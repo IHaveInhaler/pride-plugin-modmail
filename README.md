@@ -21,10 +21,10 @@ If this library is missing, the plugin will fail to import with an error about `
 In any channel where your Modmail bot listens, run:
 
 ```
-?plugins add Lesbianbasedpriderainbowunicorn/pride-plugin-modmail/pride@main
+?plugins add IHaveInhaler/pride-plugin-modmail/pride@main
 ```
 
-Replace `Lesbianbasedpriderainbowunicorn/pride-plugin-modmail` with wherever this repo lives, and `main` with the branch you want to track. Modmail will:
+Modmail will:
 
 1. Clone the repo.
 2. Install anything listed in `pride/requirements.txt` (just `cairosvg`).
