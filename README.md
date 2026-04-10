@@ -32,13 +32,16 @@ Modmail will:
 
 ### 3. Sync the slash command (first install only)
 
-Modmail registers `/pride` as a global application command. Discord can take up to an hour to propagate global commands the first time. If you want it available immediately, run once as the bot owner:
+`/pride` is defined as a global application command, but global syncs can take up to an hour to propagate. To make it available immediately in every guild your bot is currently in, run once as the bot owner:
 
 ```
-?eval await bot.tree.sync()
+?eval
+for g in bot.guilds:
+    bot.tree.copy_global_to(guild=g)
+    await bot.tree.sync(guild=g)
 ```
 
-The `?pride` prefix command works right away regardless.
+Guild syncs propagate instantly. The `?pride` prefix command works right away regardless.
 
 ## Usage
 
